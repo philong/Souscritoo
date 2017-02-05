@@ -11,3 +11,11 @@ def one_out_of_two(string):
             c = char
         result += c
     return result
+
+
+def is_isogram(string):
+    string = string.lower()
+    for c, i in zip(string, range(len(string))):
+        if i != string.rindex(c):
+            return False
+    return True
